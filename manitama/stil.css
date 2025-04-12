@@ -1,0 +1,81 @@
+#ka{
+    float: left;
+}
+h1{
+    text-align: center;
+    color: red;
+    font-size: 50px;
+}
+p{
+    font-size: 30px;
+}
+.kalp{
+    height: 70px;
+    width: 70px;
+    background-color: red;
+    position:relative;
+    box-shadow: 10px 10px 90px #f20044;
+    animation: kalpanimasyon .6s linear infinite;
+    float: left;
+}
+@keyframes kalpanimasyon {
+   0%{
+    transform: rotate(-45deg) scale(1.07);
+   } 
+   80%{
+    transform: rotate(-45deg) scale(1);
+   }
+   100%{
+    transform: rotate(-45deg) scale(.8);
+   }
+}
+.kalp::before{
+    content: '';
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-color: #f20044;
+    box-shadow: -10px 10px 90px #f20044;
+    top: -50%;
+    border-radius: 50%;
+}
+.kalp::after{
+    content: '';
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-color: #f20044;
+    box-shadow: 10px -10px 90px #f20044;
+    right: -50%;
+    border-radius: 50%;
+}
+img{
+    width: 300px;
+    height: 500px;
+    float: right;
+}
+.container{
+    width: 80%;
+    margin:auto;
+    padding: 80px 0;
+    flex-direction: row;
+    display: flex;
+    justify-content:right;
+
+}
+.resim{
+    width: 300px;
+    height: 500px;
+    background: grey;
+    transition: 0.5s;
+}
+.resim img{border-radius: 10px;}
+.resim:hover{
+    transform: scale(1.2);
+}
+a{
+   float: right;
+}
+#veda{
+    font-style:italic;
+}
